@@ -9,6 +9,7 @@ public class MenuPrincipalLogico {
     
     private MenuPrincipalGrafico menuPrincipalGrafico = new MenuPrincipalGrafico();
     
+    
     public MenuPrincipalLogico() {
     }
     
@@ -18,10 +19,12 @@ public class MenuPrincipalLogico {
         while (true) {
             
             menuPrincipalGrafico.menuPrincipalGrafico();
+            
             try {
                 Integer opcion = Integer.parseInt(entrada.nextLine());
                 if (opcion == 1){
-
+                    MenuCalculadoraLogico menuCalculadoraLogico = new MenuCalculadoraLogico();
+                    menuCalculadoraLogico.menuCalculadoraLogico();
                 } else if( opcion == 2 ){
 
                 } else if(opcion  == 3 ){
@@ -40,5 +43,4 @@ public class MenuPrincipalLogico {
         }
         
     }
-    
 }
