@@ -5,7 +5,6 @@ public class MenuPrincipalGrafico {
     public MenuPrincipalGrafico() {
         super();
     }        
-    //Scanner entrada = new Scanner(System.in);
     public void menuPrincipalGrafico(){
         System.out.println("MENU");
         System.out.println("Opción #1 Calculadora");
