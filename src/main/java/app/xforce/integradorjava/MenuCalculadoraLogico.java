@@ -10,6 +10,7 @@ public class MenuCalculadoraLogico {
     private MenuCalculadoraGrafico menuCalculadoraGrafico = new MenuCalculadoraGrafico();
     
     public MenuCalculadoraLogico(){
+        super();
     }
     
     public void menuCalculadoraLogico(){

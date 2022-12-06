@@ -23,7 +23,8 @@ public class MenuPrincipalLogico {
             try {
                 Integer opcion = Integer.parseInt(entrada.nextLine());
                 if (opcion == 1){
-
+                    MenuCalculadoraLogico menuCalculadoraLogico = new MenuCalculadoraLogico();
+                    menuCalculadoraLogico.menuCalculadoraLogico();
                 } else if( opcion == 2 ){
 
                 } else if(opcion  == 3 ){
@@ -42,9 +43,4 @@ public class MenuPrincipalLogico {
         }
         
     }
-
-    private MenuCalculadoraGrafico MenuCalculadoraGrafico() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
 }
