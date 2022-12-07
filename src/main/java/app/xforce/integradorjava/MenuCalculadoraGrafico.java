@@ -18,7 +18,7 @@ public class MenuCalculadoraGrafico {
     }
     
     public void ingresaropcion(){
-        System.out.println("Ingresar una opció");
+        System.out.println("Ingresar una opción");
     }
     
     public void errorNumeroIncorrecto(Integer num){

@@ -9,6 +9,9 @@ public class MenuPrincipalLogico {
     
     private MenuPrincipalGrafico menuPrincipalGrafico = new MenuPrincipalGrafico();
     
+    private MenuCalculadoraLogico menuCalculadoraLogico = new MenuCalculadoraLogico();
+    
+    private MenuConverTempLogico menuConverTempLogico = new MenuConverTempLogico();
     
     public MenuPrincipalLogico() {
     }
@@ -21,14 +24,16 @@ public class MenuPrincipalLogico {
             menuPrincipalGrafico.menuPrincipalGrafico();
             
             try {
+                menuPrincipalGrafico.ingresarOpcion();
                 Integer opcion = Integer.parseInt(entrada.nextLine());
                 if (opcion == 1){
-                    MenuCalculadoraLogico menuCalculadoraLogico = new MenuCalculadoraLogico();
+                    
                     menuCalculadoraLogico.menuCalculadoraLogico();
                 } else if( opcion == 2 ){
 
                 } else if(opcion  == 3 ){
-
+                    
+                    menuConverTempLogico.menuConvtempLogico();
                 } else if(opcion  == 4 ){
                     break;
                 } else {

@@ -9,6 +9,6 @@ public class GradosCaF extends ConversorDeTemperatura {
     }
     
     public float gradosCaF (){
-        return this.getGradosIngresados()* 1.8f + 32;
+        return this.getGradosIngresados()* 1.8f + 32 ;
     }
 }
