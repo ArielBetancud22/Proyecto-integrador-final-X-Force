@@ -29,10 +29,9 @@ public class MenuConverTempLogico {
     
     private GradosRaF gradosRaF = new GradosRaF();
     
-    
-   
     public MenuConverTempLogico(){
     }
+    
     
     public void menuConvtempLogico(){
         

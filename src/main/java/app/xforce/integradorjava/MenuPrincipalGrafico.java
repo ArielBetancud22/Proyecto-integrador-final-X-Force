@@ -8,14 +8,15 @@ public class MenuPrincipalGrafico {
     public void menuPrincipalGrafico(){
         System.out.println("MENU");
         System.out.println("Opción #1 Calculadora");
-        System.out.println("Opción #2 Conversor de Monedas");
-        System.out.println("Opción #3 Conversor de Temperaturas");
+        System.out.println("Opción #2 Conversor de divisas");
+        System.out.println("Opción #3 Conversor de temperaturas");
         System.out.println("Opción #4 Salir");
         System.out.println("");
     }
     
     public void ingresarOpcion(){
-        System.out.println("Ingrese opcion: ");
+        System.out.println("Ingrese una opcion: ");
+        System.out.println("");
     }
    
     public void errorNumeroIncorrecto(Integer num){
