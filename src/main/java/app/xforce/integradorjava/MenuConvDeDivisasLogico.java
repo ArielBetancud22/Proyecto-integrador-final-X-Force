@@ -5,11 +5,12 @@ package app.xforce.integradorjava;
 import app.xforce.integradorjava.operaciones.calculadora.Division;
 import app.xforce.integradorjava.operaciones.calculadora.Multiplicacion;
 import java.util.Scanner;
+import errors.ValorNegativo;
 
 
 public class MenuConvDeDivisasLogico {
        
-    private MenuPrincipalGrafico MenuPrincipalGrafico = new MenuPrincipalGrafico();
+    private MenuPrincipalGrafico menuPrincipalGrafico = new MenuPrincipalGrafico();
     
     private Scanner entrada = new Scanner(System.in);
     
@@ -20,6 +21,7 @@ public class MenuConvDeDivisasLogico {
     private Multiplicacion multiplicacion = new Multiplicacion();
     
     private Division division = new Division();
+    
 
     
     public MenuConvDeDivisasLogico() {
@@ -27,13 +29,10 @@ public class MenuConvDeDivisasLogico {
     
     public void menuConvDeDivisasLogico(){
             
-            
-            
-            
             while (true) {
                 try {
                     menuConvDeDivisasGrafico.menuConvDeDivisasGrafico();
-                    MenuPrincipalGrafico.ingresarOpcion();
+                    menuPrincipalGrafico.ingresarOpcion();
                     Integer opcion = Integer.parseInt(entrada.nextLine());
                     if (opcion == 1){
                         textoDeConverDeDivisas.pesoDolar();
@@ -41,6 +40,7 @@ public class MenuConvDeDivisasLogico {
                         this.division.setValorA(Float.parseFloat(entrada.nextLine()));
                         this.textoDeConverDeDivisas.cambio();
                         this.division.setValorB(Float.parseFloat(entrada.nextLine()));
+                        this.ifValorMenor();
                         textoDeConverDeDivisas.salida(this.division.divisionb());
                  
                     }else if (opcion == 2){
@@ -49,6 +49,7 @@ public class MenuConvDeDivisasLogico {
                         this.multiplicacion.setValorA(Float.parseFloat(entrada.nextLine()));
                         textoDeConverDeDivisas.cambio();
                         this.multiplicacion.setValorB(Float.parseFloat(entrada.nextLine()));
+                        this.ifValorMenor();
                         textoDeConverDeDivisas.salida(this.multiplicacion.multiplicacion());
                         
                     }else if (opcion == 3){
@@ -57,6 +58,7 @@ public class MenuConvDeDivisasLogico {
                         this.division.setValorA(Float.parseFloat(entrada.nextLine()));
                         this.textoDeConverDeDivisas.cambio();
                         this.division.setValorB(Float.parseFloat(entrada.nextLine()));
+                        this.ifValorMenor();
                         textoDeConverDeDivisas.salida(this.division.division());
                         
                     }else if (opcion == 4){
@@ -65,6 +67,7 @@ public class MenuConvDeDivisasLogico {
                         this.multiplicacion.setValorA(Float.parseFloat(entrada.nextLine()));
                         textoDeConverDeDivisas.cambio();
                         this.multiplicacion.setValorB(Float.parseFloat(entrada.nextLine()));
+                        this.ifValorMenor();
                         textoDeConverDeDivisas.salida(this.multiplicacion.multiplicacion());
                         
                     }else if (opcion == 5){
@@ -73,6 +76,7 @@ public class MenuConvDeDivisasLogico {
                         this.division.setValorA(Float.parseFloat(entrada.nextLine()));
                         this.textoDeConverDeDivisas.cambio();
                         this.division.setValorB(Float.parseFloat(entrada.nextLine()));
+                        this.ifValorMenor();
                         textoDeConverDeDivisas.salida(this.division.divisionb());
                         
                     }else if (opcion == 6){
@@ -81,24 +85,30 @@ public class MenuConvDeDivisasLogico {
                         this.multiplicacion.setValorA(Float.parseFloat(entrada.nextLine()));
                         textoDeConverDeDivisas.cambio();
                         this.multiplicacion.setValorB(Float.parseFloat(entrada.nextLine()));
+                        this.ifValorMenor();
                         textoDeConverDeDivisas.salida(this.multiplicacion.multiplicacion());
                         
                     }else if (opcion == 7){
-                        
                         break;
-               
                     }
                     else {
-                        MenuPrincipalGrafico.errorNumeroIncorrecto(opcion);
+                        menuPrincipalGrafico.errorNumeroIncorrecto(opcion);
                       
                     }
+                } catch(ValorNegativo val){
+                    menuConvDeDivisasGrafico.numMenor();
                 } catch (Exception e) {
-                    MenuPrincipalGrafico.errorNoNumero();
+                    menuPrincipalGrafico.errorNoNumero();
                 }
             }
-
         
     }
     
+    
+    public void ifValorMenor() throws ValorNegativo {
+        if (this.division.getValorA() < 0 || this.division.getValorB() < 0) {
+            throw new ValorNegativo("Valor menor a 0");
+        }
+    }
     
 }

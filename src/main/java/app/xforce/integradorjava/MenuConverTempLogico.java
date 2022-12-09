@@ -38,6 +38,8 @@ public class MenuConverTempLogico {
         while (true) {            
             
             menuConversorDeTemperaturaGrafico.menuGraficoConversor();
+            menuConversorDeTemperaturaGrafico.ingresaropcion();
+            
             try {
                 Integer opcion = Integer.parseInt(entrada.nextLine());
                 if (opcion == 1) {//Grados Celcius a kelvin

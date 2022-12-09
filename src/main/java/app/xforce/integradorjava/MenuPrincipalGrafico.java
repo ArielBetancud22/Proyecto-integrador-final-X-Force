@@ -6,6 +6,7 @@ public class MenuPrincipalGrafico {
         super();
     }        
     public void menuPrincipalGrafico(){
+        System.out.println("");
         System.out.println("MENU");
         System.out.println("Opción #1 Calculadora");
         System.out.println("Opción #2 Conversor de divisas");
@@ -24,7 +25,7 @@ public class MenuPrincipalGrafico {
     }
     
     public void errorNoNumero(){
-        System.out.println("La Opcion no es un numero");
+        System.out.println("La opcion o el valor no es un numero");
     }
     
 }
