@@ -17,6 +17,8 @@ public class MenuConverTempLogico {
     
     private MenuConversorDeTemperaturaGrafico menuConversorDeTemperaturaGrafico = new MenuConversorDeTemperaturaGrafico();
     
+    private MenuPrincipalGrafico menuPrincipalGrafico = new MenuPrincipalGrafico();
+    
     private GradosCaF gradosCaF = new GradosCaF();
     
     private GradosCaK gradosCaK = new GradosCaK();
@@ -72,7 +74,7 @@ public class MenuConverTempLogico {
                     menuConversorDeTemperaturaGrafico.errorNumeroIncorrecto(opcion);
                 }
             } catch (Exception e) {
-                menuConversorDeTemperaturaGrafico.errorNoNumero();
+                menuPrincipalGrafico.errorNoNumero();
             }
             
         }

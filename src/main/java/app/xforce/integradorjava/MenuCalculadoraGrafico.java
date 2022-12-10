@@ -25,9 +25,5 @@ public class MenuCalculadoraGrafico {
     public void errorNumeroIncorrecto(Integer num){
         System.out.println("Numero de opcion incorrecto = "+ num );
     }
-    
-    public void errorNoNumero(){
-        System.out.println("La Opcion no es un numero");
-    }
 
 }

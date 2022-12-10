@@ -19,6 +19,8 @@ public class MenuCalculadoraLogico {
     
     private Multiplicacion multiplicacion = new Multiplicacion();
     
+    private MenuPrincipalGrafico menuPrincipalGrafico = new MenuPrincipalGrafico();
+    
     private Division division = new Division();
     
     private SalidaDeTexto salidaDeTexto = new SalidaDeTexto();
@@ -68,7 +70,7 @@ public class MenuCalculadoraLogico {
                     menuCalculadoraGrafico.errorNumeroIncorrecto(opcion);
                 }
             } catch (Exception e) {
-                menuCalculadoraGrafico.errorNoNumero();
+                menuPrincipalGrafico.errorNoNumero();
             }
         }
     }
