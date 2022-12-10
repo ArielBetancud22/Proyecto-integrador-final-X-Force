@@ -8,6 +8,6 @@ public class GradosFaC extends ConversorDeTemperatura{
            }
     
     public float gradosFaC(){
-        return (this.getGradosIngresados()-32) * 1.8f;
+        return (this.getGradosIngresados()-32) * 0.55f;
     }
 }

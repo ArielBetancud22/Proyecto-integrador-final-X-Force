@@ -8,6 +8,7 @@ public class MenuCalculadoraGrafico {
     }
     
     public void menuCalculadoraGrafico(){
+        System.out.println("");
         System.out.println("Menu Calculadora");
         System.out.println("Opción: #1 Suma");
         System.out.println("Opción: #2 Resta");
@@ -18,15 +19,11 @@ public class MenuCalculadoraGrafico {
     }
     
     public void ingresaropcion(){
-        System.out.println("Ingresar una opció");
+        System.out.println("Ingresar una opción: ");
     }
     
     public void errorNumeroIncorrecto(Integer num){
         System.out.println("Numero de opcion incorrecto = "+ num );
-    }
-    
-    public void errorNoNumero(){
-        System.out.println("La Opcion no es un numero");
     }
 
 }
